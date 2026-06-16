@@ -82,6 +82,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mostra Essenza 2026 — Jeito de Viver" },
+      { name: "description", content: "Mostra Essenza - Poa e Pelotas" },
+      { property: "og:description", content: "Mostra Essenza - Poa e Pelotas" },
+      { name: "twitter:description", content: "Mostra Essenza - Poa e Pelotas" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3136dadf-858a-4bee-80fb-87eacb5769ae/id-preview-a718a6fa--38ec8ce6-6632-4ca1-b7c6-5be90eed265c.lovable.app-1781647080730.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3136dadf-858a-4bee-80fb-87eacb5769ae/id-preview-a718a6fa--38ec8ce6-6632-4ca1-b7c6-5be90eed265c.lovable.app-1781647080730.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
