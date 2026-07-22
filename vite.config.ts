@@ -6,10 +6,18 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// When deploying outside Lovable (e.g. Vercel), pin the Nitro preset so the
+// build produces the correct output layout for the target platform.
+// Vercel sets the VERCEL env var during builds; fall back to NITRO_PRESET override.
+const nitroPreset =
+  process.env.NITRO_PRESET ??
+  (process.env.VERCEL ? "vercel" : undefined);
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: nitroPreset ? { preset: nitroPreset } : undefined,
 });
