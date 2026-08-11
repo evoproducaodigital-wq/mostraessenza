@@ -38,33 +38,61 @@ export function ArchitectsSection({ id, eyebrow, city, architects }: Props) {
         </div>
 
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {architects.map((a, i) => (
-            <button
-              key={a.id}
-              onClick={() => setSelected(a)}
-              className="group relative aspect-[3/4] bg-card border border-border/60 flex flex-col items-center justify-center p-8 text-center reveal transition-all duration-500 hover:border-primary/60 hover:-translate-y-1"
-              style={{ transitionDelay: `${i * 50}ms` }}
-            >
-              <span className="absolute top-5 left-5 text-[0.6rem] tracking-[0.3em] uppercase text-muted-foreground/70">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.3em] uppercase text-primary">
-                Em breve
-              </span>
+          {architects.map((a, i) =>
+            a.confirmed ? (
+              <Link
+                key={a.id}
+                to="/arquitetos/$slug"
+                params={{ slug: a.slug }}
+                className="group relative aspect-[3/4] bg-card border border-border/60 overflow-hidden block reveal transition-all duration-500 hover:border-primary/60 hover:-translate-y-1"
+                style={{ transitionDelay: `${i * 50}ms` }}
+              >
+                <img
+                  src={a.photo}
+                  alt={a.name}
+                  className="absolute inset-0 w-full h-full object-cover opacity-85 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+                <span className="absolute top-5 left-5 text-[0.6rem] tracking-[0.3em] uppercase text-foreground/70">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-left">
+                  <div className="font-display text-lg leading-snug">{a.name}</div>
+                  <div className="mt-2 text-[0.6rem] tracking-[0.35em] uppercase text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    Ver perfil
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <button
+                key={a.id}
+                onClick={() => setSelected(a)}
+                className="group relative aspect-[3/4] bg-card border border-border/60 flex flex-col items-center justify-center p-8 text-center reveal transition-all duration-500 hover:border-primary/60 hover:-translate-y-1"
+                style={{ transitionDelay: `${i * 50}ms` }}
+              >
+                <span className="absolute top-5 left-5 text-[0.6rem] tracking-[0.3em] uppercase text-muted-foreground/70">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.3em] uppercase text-primary">
+                  Em breve
+                </span>
 
-              <img
-                src={logo.url}
-                alt=""
-                className="w-3/4 invert opacity-90 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
+                <img
+                  src={logo.url}
+                  alt=""
+                  className="w-3/4 invert opacity-90 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
 
-              <span className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] tracking-[0.35em] uppercase text-muted-foreground group-hover:text-primary transition-colors">
-                Arquiteto confirmado
-              </span>
-            </button>
-          ))}
+                <span className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[0.65rem] tracking-[0.35em] uppercase text-muted-foreground group-hover:text-primary transition-colors">
+                  Arquiteto confirmado
+                </span>
+              </button>
+            ),
+          )}
         </div>
+
       </div>
 
       <ArchitectDialog
