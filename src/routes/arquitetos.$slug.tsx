@@ -159,8 +159,8 @@ function ArchitectPage() {
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {(a.gallery && a.gallery.length > 0
               ? a.gallery
-              : Array.from({ length: 6 }, () => "")
-            ).map((src, i) => (
+              : Array.from<string>({ length: 6 }).fill("")
+            ).map((src: string, i: number) => (
               <div
                 key={i}
                 className="relative aspect-[4/3] bg-card border border-border/60 overflow-hidden flex items-center justify-center"
