@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArquitetosSlugRouteImport } from './routes/arquitetos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArquitetosSlugRoute = ArquitetosSlugRouteImport.update({
+  id: '/arquitetos/$slug',
+  path: '/arquitetos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/arquitetos/$slug': typeof ArquitetosSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/arquitetos/$slug': typeof ArquitetosSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/arquitetos/$slug': typeof ArquitetosSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/arquitetos/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/arquitetos/$slug'
+  id: '__root__' | '/' | '/arquitetos/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArquitetosSlugRoute: typeof ArquitetosSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/arquitetos/$slug': {
+      id: '/arquitetos/$slug'
+      path: '/arquitetos/$slug'
+      fullPath: '/arquitetos/$slug'
+      preLoaderRoute: typeof ArquitetosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArquitetosSlugRoute: ArquitetosSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
