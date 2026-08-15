@@ -16,10 +16,11 @@ type Props = {
   id: string;
   eyebrow: string;
   city: string;
+  description?: string;
   architects: Architect[];
 };
 
-export function ArchitectsSection({ id, eyebrow, city, architects }: Props) {
+export function ArchitectsSection({ id, eyebrow, city, description, architects }: Props) {
   const ref = useReveal<HTMLDivElement>();
   const [selected, setSelected] = useState<Architect | null>(null);
 
@@ -33,10 +34,11 @@ export function ArchitectsSection({ id, eyebrow, city, architects }: Props) {
           </h2>
           <div className="mt-6 gold-line !w-32" />
           <p className="mt-8 max-w-xl text-muted-foreground">
-            Arquitetos convidados para assinar ambientes exclusivos na Mostra
-            Essenza 2026.
+            {description ??
+              "Arquitetos convidados para assinar ambientes exclusivos na Mostra Essenza 2026."}
           </p>
         </div>
+
 
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {architects.map((a, i) =>
