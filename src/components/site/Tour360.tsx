@@ -132,13 +132,20 @@ export function Tour360() {
           aria-label={`Vista ampliada: ${current.title}`}
           className="max-w-[96vw] w-[96vw] border-border/60 bg-background p-2"
         >
-          <div className="overflow-x-auto">
-            <img
-              src={current.url}
-              alt={`Vista panorâmica ampliada — ${current.title}`}
-              className="h-[70vh] w-auto max-w-none object-contain"
-            />
+          <div className="h-[75vh] w-full">
+            {open && (
+              <ClientOnly fallback={null}>
+                <Suspense fallback={null}>
+                  <Panorama360
+                    key={`full-${current.url}`}
+                    src={current.url}
+                    title={current.title}
+                  />
+                </Suspense>
+              </ClientOnly>
+            )}
           </div>
+
           <p className="px-2 pb-1 text-[0.6rem] tracking-[0.3em] uppercase text-muted-foreground">
             {current.title} — arraste para percorrer o ambiente
           </p>
