@@ -5,10 +5,10 @@ const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#sensorial", label: "Experiência" },
   { href: "#arquitetos-poa", label: "Arquitetos" },
-  { href: "#galeria", label: "Galeria" },
   { href: "#tour", label: "Tour 360°" },
   { href: "#contato", label: "Contato" },
 ];
+
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);

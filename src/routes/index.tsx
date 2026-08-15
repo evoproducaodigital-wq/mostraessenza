@@ -4,15 +4,13 @@ import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
 import { Sensorial } from "@/components/site/Sensorial";
 import { ArchitectsSection } from "@/components/site/ArchitectsSection";
-import { Gallery } from "@/components/site/Gallery";
 import { Tour360 } from "@/components/site/Tour360";
-import { Testimonials } from "@/components/site/Testimonials";
-import { EssenzaStore } from "@/components/site/EssenzaStore";
 import { InstagramFeed } from "@/components/site/InstagramFeed";
 import { Sponsors } from "@/components/site/Sponsors";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import { Footer } from "@/components/site/Footer";
 import { architectsPOA, architectsPelotas } from "@/data/architects";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,10 +68,7 @@ function Index() {
           architects={[...architectsPOA, ...architectsPelotas]}
         />
 
-        <Gallery />
         <Tour360 />
-        <Testimonials />
-        <EssenzaStore />
         <InstagramFeed />
         <Sponsors />
         <FinalCTA />
@@ -82,3 +77,4 @@ function Index() {
     </div>
   );
 }
+
