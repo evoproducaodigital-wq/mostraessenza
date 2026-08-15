@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
+import { ClientOnly } from "@tanstack/react-router";
 import { Expand, MoveHorizontal } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+
+const Panorama360 = lazy(() => import("@/components/site/Panorama360"));
+
 import t1 from "@/assets/tour/tour-1.jpg.asset.json";
 import t2 from "@/assets/tour/tour-2.jpg.asset.json";
 import t3 from "@/assets/tour/tour-3.jpg.asset.json";
