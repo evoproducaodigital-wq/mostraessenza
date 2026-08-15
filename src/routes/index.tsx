@@ -65,15 +65,11 @@ function Index() {
         <ArchitectsSection
           id="arquitetos-poa"
           eyebrow="Arquitetos Convidados"
-          city="Porto Alegre"
-          architects={architectsPOA}
+          city="Arquitetos Convidados Mostra Essenza"
+          description="Profissionais convidados para assinar ambientes exclusivos na Mostra Essenza 2026, nas unidades de Porto Alegre e Pelotas."
+          architects={[...architectsPOA, ...architectsPelotas]}
         />
-        <ArchitectsSection
-          id="arquitetos-pelotas"
-          eyebrow="Arquitetos Convidados"
-          city="Pelotas"
-          architects={architectsPelotas}
-        />
+
         <Gallery />
         <Tour360 />
         <Testimonials />

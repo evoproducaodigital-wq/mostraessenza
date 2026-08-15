@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
+import { ClientOnly } from "@tanstack/react-router";
 import { Expand, MoveHorizontal } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+
+const Panorama360 = lazy(() => import("@/components/site/Panorama360"));
+
 import t1 from "@/assets/tour/tour-1.jpg.asset.json";
 import t2 from "@/assets/tour/tour-2.jpg.asset.json";
 import t3 from "@/assets/tour/tour-3.jpg.asset.json";
@@ -48,22 +52,33 @@ export function Tour360() {
           </p>
         </div>
 
-        <div className="relative w-full bg-card border border-border/60 overflow-hidden reveal group">
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            aria-label={`Ampliar vista panorâmica: ${current.title}`}
-            className="block w-full"
-          >
-            <img
-              src={current.url}
-              alt={`Vista panorâmica 360° — ${current.title}, Mostra Essenza 2026`}
-              className="w-full aspect-[21/9] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-              loading="lazy"
-            />
-          </button>
+        <div className="relative w-full bg-card border border-border/60 overflow-hidden reveal">
+          <div className="w-full aspect-[21/9]">
+            <ClientOnly
+              fallback={
+                <img
+                  src={current.url}
+                  alt={`Vista panorâmica 360° — ${current.title}, Mostra Essenza 2026`}
+                  className="h-full w-full object-cover"
+                />
+              }
+            >
+              <Suspense
+                fallback={
+                  <img
+                    src={current.url}
+                    alt={`Vista panorâmica 360° — ${current.title}`}
+                    className="h-full w-full object-cover"
+                  />
+                }
+              >
+                <Panorama360 key={current.url} src={current.url} title={current.title} />
+              </Suspense>
+            </ClientOnly>
+          </div>
 
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background/95 to-transparent" />
+
 
           <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-6 md:p-8">
             <div>
@@ -117,13 +132,20 @@ export function Tour360() {
           aria-label={`Vista ampliada: ${current.title}`}
           className="max-w-[96vw] w-[96vw] border-border/60 bg-background p-2"
         >
-          <div className="overflow-x-auto">
-            <img
-              src={current.url}
-              alt={`Vista panorâmica ampliada — ${current.title}`}
-              className="h-[70vh] w-auto max-w-none object-contain"
-            />
+          <div className="h-[75vh] w-full">
+            {open && (
+              <ClientOnly fallback={null}>
+                <Suspense fallback={null}>
+                  <Panorama360
+                    key={`full-${current.url}`}
+                    src={current.url}
+                    title={current.title}
+                  />
+                </Suspense>
+              </ClientOnly>
+            )}
           </div>
+
           <p className="px-2 pb-1 text-[0.6rem] tracking-[0.3em] uppercase text-muted-foreground">
             {current.title} — arraste para percorrer o ambiente
           </p>
