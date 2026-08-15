@@ -52,22 +52,33 @@ export function Tour360() {
           </p>
         </div>
 
-        <div className="relative w-full bg-card border border-border/60 overflow-hidden reveal group">
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            aria-label={`Ampliar vista panorâmica: ${current.title}`}
-            className="block w-full"
-          >
-            <img
-              src={current.url}
-              alt={`Vista panorâmica 360° — ${current.title}, Mostra Essenza 2026`}
-              className="w-full aspect-[21/9] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-              loading="lazy"
-            />
-          </button>
+        <div className="relative w-full bg-card border border-border/60 overflow-hidden reveal">
+          <div className="w-full aspect-[21/9]">
+            <ClientOnly
+              fallback={
+                <img
+                  src={current.url}
+                  alt={`Vista panorâmica 360° — ${current.title}, Mostra Essenza 2026`}
+                  className="h-full w-full object-cover"
+                />
+              }
+            >
+              <Suspense
+                fallback={
+                  <img
+                    src={current.url}
+                    alt={`Vista panorâmica 360° — ${current.title}`}
+                    className="h-full w-full object-cover"
+                  />
+                }
+              >
+                <Panorama360 key={current.url} src={current.url} title={current.title} />
+              </Suspense>
+            </ClientOnly>
+          </div>
 
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background/95 to-transparent" />
+
 
           <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-6 md:p-8">
             <div>
