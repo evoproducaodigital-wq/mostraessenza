@@ -23,7 +23,6 @@ export default function Panorama360({ src, title }: Props) {
       viewer = pannellum.viewer(containerRef.current, {
         type: "equirectangular",
         panorama: src,
-        title,
         autoLoad: true,
         autoRotate: -2,
         showZoomCtrl: true,
