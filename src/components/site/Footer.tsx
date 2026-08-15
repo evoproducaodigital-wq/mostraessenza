@@ -44,12 +44,12 @@ export function Footer() {
           links={[
             { label: "Sobre", href: "#sobre" },
             { label: "Arquitetos", href: "#arquitetos-poa" },
-            { label: "Galeria", href: "#galeria" },
             { label: "Tour 360°", href: "#tour" },
             { label: "Instagram", href: "https://www.instagram.com/essenzacasaejardimpoa/" },
             { label: "Contato", href: "#contato" },
           ]}
         />
+
         <FooterCol
           title="Contato"
           links={[
