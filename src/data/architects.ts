@@ -8,6 +8,16 @@ import gordo from "@/assets/architects/gordo-muswieck.png.asset.json";
 import fernanda from "@/assets/architects/fernanda-basso.png.asset.json";
 import guilherme from "@/assets/architects/guilherme-lopes.png.asset.json";
 import helenita from "@/assets/architects/helenita-paula-laurino.png.asset.json";
+import barbara from "@/assets/architects/barbara-haas-aline-menezes.png.asset.json";
+import heloisa from "@/assets/architects/heloisa-braga.png.asset.json";
+import ivan from "@/assets/architects/ivan-andrade.png.asset.json";
+import jane from "@/assets/architects/jane-fleck.png.asset.json";
+import liana from "@/assets/architects/liana-lamare.png.asset.json";
+import livia from "@/assets/architects/livia-bortoncello.png.asset.json";
+import luiz from "@/assets/architects/luiz-humberto.png.asset.json";
+import renato from "@/assets/architects/renato-bing.jpeg.asset.json";
+import simoneB from "@/assets/architects/simone-bertuzzo-maira-ritter.png.asset.json";
+import simoneN from "@/assets/architects/simone-neutzling.jpeg.asset.json";
 
 export type Architect = {
   id: string;
@@ -43,9 +53,21 @@ const named: Array<{ slug: string; name: string; photo: string }> = [
     name: "Helenita Falcão Laurino e Paula Laurino Dutra",
     photo: helenita.url,
   },
+  { slug: "barbara-haas-aline-menezes", name: "Bárbara Haas e Aline Menezes", photo: barbara.url },
+  { slug: "heloisa-braga", name: "Heloísa Braga", photo: heloisa.url },
+  { slug: "ivan-andrade", name: "Ivan Andrade", photo: ivan.url },
+  { slug: "jane-fleck", name: "Jane Fleck", photo: jane.url },
+  { slug: "liana-lamare", name: "Liana Lamare", photo: liana.url },
+  { slug: "livia-bortoncello", name: "Lívia Bortoncello", photo: livia.url },
+  { slug: "luiz-humberto", name: "Luiz Humberto", photo: luiz.url },
+  { slug: "renato-bing", name: "Renato Bing", photo: renato.url },
+  { slug: "simone-bertuzzo-maira-ritter", name: "Simone Bertuzzo e Máira Ritter", photo: simoneB.url },
+  { slug: "simone-neutzling", name: "Simone Neutzling", photo: simoneN.url },
 ];
 
-export const architectsPOA: Architect[] = named.map((a) => ({
+export const architectsPOA: Architect[] = [...named]
+  .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"))
+  .map((a) => ({
   id: a.slug,
   slug: a.slug,
   name: a.name,
@@ -54,9 +76,9 @@ export const architectsPOA: Architect[] = named.map((a) => ({
   projectDescription:
     "A descrição do projeto assinado por este arquiteto para a Mostra Essenza 2026 será divulgada em breve.",
   gallery: [],
-  confirmed: true,
-  city: "porto-alegre",
-}));
+    confirmed: true,
+    city: "porto-alegre",
+  }));
 
 // Estrutura pronta para CMS — basta marcar confirmed:true e preencher os campos.
 const placeholders = (city: Architect["city"], count: number): Architect[] =>
