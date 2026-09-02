@@ -18,6 +18,16 @@ import luiz from "@/assets/architects/luiz-humberto.png.asset.json";
 import renato from "@/assets/architects/renato-bing.jpeg.asset.json";
 import simoneB from "@/assets/architects/simone-bertuzzo-maira-ritter.png.asset.json";
 import simoneN from "@/assets/architects/simone-neutzling.jpeg.asset.json";
+import petra from "@/assets/architects/petra-goetzke.png.asset.json";
+import ruy from "@/assets/architects/ruy-barcellos.png.asset.json";
+import lucianeD from "@/assets/architects/luciane-cardoso-daniela-martins.png.asset.json";
+import nayara from "@/assets/architects/nayara-apolinario-veronica-laurindo.png.asset.json";
+import zeca from "@/assets/architects/zeca-amaral.jpeg.asset.json";
+import carol from "@/assets/architects/carol-ochman.png.asset.json";
+import patricia from "@/assets/architects/patricia-carvalho-tatiana-franco.png.asset.json";
+import eliana from "@/assets/architects/eliana-martins.png.asset.json";
+import lucianaO from "@/assets/architects/luciana-de-oliveira.jpeg.asset.json";
+import carolinaA from "@/assets/architects/carolina-rodrigues-alejandra-affonso.jpeg.asset.json";
 
 export type Architect = {
   id: string;
@@ -63,6 +73,32 @@ const named: Array<{ slug: string; name: string; photo: string }> = [
   { slug: "renato-bing", name: "Renato Bing", photo: renato.url },
   { slug: "simone-bertuzzo-maira-ritter", name: "Simone Bertuzzo e Máira Ritter", photo: simoneB.url },
   { slug: "simone-neutzling", name: "Simone Neutzling", photo: simoneN.url },
+  { slug: "petra-goetzke", name: "Petra Göetzke", photo: petra.url },
+  { slug: "ruy-barcellos", name: "Ruy Barcellos", photo: ruy.url },
+  {
+    slug: "luciane-cardoso-daniela-martins",
+    name: "Luciane Cardoso e Daniela Martins",
+    photo: lucianeD.url,
+  },
+  {
+    slug: "nayara-apolinario-veronica-laurindo",
+    name: "Nayara Apolinário e Verônica Laurindo",
+    photo: nayara.url,
+  },
+  { slug: "zeca-amaral", name: "Zéca Amaral", photo: zeca.url },
+  { slug: "carol-ochman", name: "Carol Ochman", photo: carol.url },
+  {
+    slug: "patricia-carvalho-tatiana-franco",
+    name: "Patrícia Carvalho e Tatiana Franco",
+    photo: patricia.url,
+  },
+  { slug: "eliana-martins", name: "Eliana Martins", photo: eliana.url },
+  { slug: "luciana-de-oliveira", name: "Luciana De Oliveira", photo: lucianaO.url },
+  {
+    slug: "carolina-rodrigues-alejandra-affonso",
+    name: "Carolina Rodrigues e Alejandra Affonso",
+    photo: carolinaA.url,
+  },
 ];
 
 export const architectsPOA: Architect[] = [...named]
