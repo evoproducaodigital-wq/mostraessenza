@@ -53,7 +53,7 @@ export function ArchitectsSection({ id, eyebrow, city, description, architects }
                 <img
                   src={a.photo}
                   alt={a.name}
-                  className="absolute inset-0 w-full h-full object-cover opacity-85 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-85 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
@@ -121,7 +121,7 @@ function ArchitectDialog({
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr]">
           <div className="bg-card flex items-center justify-center p-10 min-h-[280px] border-b md:border-b-0 md:border-r border-border/60">
             {a?.photo ? (
-              <img src={a.photo} alt={a.name} className="w-full h-full object-cover" />
+              <img src={a.photo} alt={a.name} className="w-full h-full object-cover grayscale" />
             ) : (
               <img
                 src={logo.url}
