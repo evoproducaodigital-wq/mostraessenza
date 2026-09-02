@@ -73,7 +73,7 @@ function ArchitectPage() {
                 <img
                   src={a.photo}
                   alt={a.name ?? "Arquiteto"}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
               ) : (
                 <img
