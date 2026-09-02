@@ -73,6 +73,32 @@ const named: Array<{ slug: string; name: string; photo: string }> = [
   { slug: "renato-bing", name: "Renato Bing", photo: renato.url },
   { slug: "simone-bertuzzo-maira-ritter", name: "Simone Bertuzzo e Máira Ritter", photo: simoneB.url },
   { slug: "simone-neutzling", name: "Simone Neutzling", photo: simoneN.url },
+  { slug: "petra-goetzke", name: "Petra Göetzke", photo: petra.url },
+  { slug: "ruy-barcellos", name: "Ruy Barcellos", photo: ruy.url },
+  {
+    slug: "luciane-cardoso-daniela-martins",
+    name: "Luciane Cardoso e Daniela Martins",
+    photo: lucianeD.url,
+  },
+  {
+    slug: "nayara-apolinario-veronica-laurindo",
+    name: "Nayara Apolinário e Verônica Laurindo",
+    photo: nayara.url,
+  },
+  { slug: "zeca-amaral", name: "Zéca Amaral", photo: zeca.url },
+  { slug: "carol-ochman", name: "Carol Ochman", photo: carol.url },
+  {
+    slug: "patricia-carvalho-tatiana-franco",
+    name: "Patrícia Carvalho e Tatiana Franco",
+    photo: patricia.url,
+  },
+  { slug: "eliana-martins", name: "Eliana Martins", photo: eliana.url },
+  { slug: "luciana-de-oliveira", name: "Luciana De Oliveira", photo: lucianaO.url },
+  {
+    slug: "carolina-rodrigues-alejandra-affonso",
+    name: "Carolina Rodrigues e Alejandra Affonso",
+    photo: carolinaA.url,
+  },
 ];
 
 export const architectsPOA: Architect[] = [...named]
