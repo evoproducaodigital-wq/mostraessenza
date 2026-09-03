@@ -26,6 +26,9 @@ import t17 from "@/assets/tour/tour-17.jpg.asset.json";
 import t18 from "@/assets/tour/tour-18.jpg.asset.json";
 import t19 from "@/assets/tour/tour-19.jpg.asset.json";
 import t20 from "@/assets/tour/tour-20.jpg.asset.json";
+import t21 from "@/assets/tour/tour-21.jpg.asset.json";
+import t22 from "@/assets/tour/tour-22.jpg.asset.json";
+import t23 from "@/assets/tour/tour-23.jpg.asset.json";
 
 const views = [
   { url: t1.url, title: "Sala Tropical" },
@@ -48,6 +51,9 @@ const views = [
   { url: t18.url, title: "Sala Terracota" },
   { url: t19.url, title: "Espaço Galeria" },
   { url: t20.url, title: "Corredor Listrado Azul" },
+  { url: t21.url, title: "Salão do Tapete Listrado" },
+  { url: t22.url, title: "Escadaria Bordô" },
+  { url: t23.url, title: "Fachada Histórica" },
 ];
 
 
