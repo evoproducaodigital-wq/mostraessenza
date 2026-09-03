@@ -1,6 +1,13 @@
 import { Instagram } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 
+/**
+ * Feed do Instagram via SnapWidget (gratuito).
+ * Para ativar: crie o widget em https://snapwidget.com (tipo "Instagram Grid"),
+ * copie a URL do iframe (ex.: https://snapwidget.com/embed/123456) e cole abaixo.
+ */
+const INSTAGRAM_WIDGET_URL = "";
+
 export function InstagramFeed() {
   const ref = useReveal<HTMLDivElement>();
   return (
@@ -23,31 +30,44 @@ export function InstagramFeed() {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-3 reveal">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <a
-              key={i}
-              href="https://www.instagram.com/essenzacasaejardimpoa/"
-              target="_blank"
-              rel="noreferrer"
-              className="group relative aspect-square overflow-hidden bg-background border border-border/60"
-            >
-              <div
-                className="absolute inset-0 opacity-50 transition-transform duration-700 group-hover:scale-110"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(135deg, var(--graphite), var(--background))",
-                }}
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-background/60">
-                <Instagram size={22} className="text-primary" />
-              </div>
-              <span className="absolute bottom-2 left-2 text-[0.55rem] tracking-[0.3em] uppercase text-muted-foreground">
-                @essenza · {String(i + 1).padStart(2, "0")}
-              </span>
-            </a>
-          ))}
-        </div>
+        {INSTAGRAM_WIDGET_URL ? (
+          <div className="reveal">
+            <iframe
+              src={INSTAGRAM_WIDGET_URL}
+              title="Últimas postagens do Instagram @essenzacasaejardimpoa"
+              className="w-full border border-border/60"
+              style={{ minHeight: 640 }}
+              allowTransparency
+              loading="lazy"
+            />
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-3 reveal">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <a
+                key={i}
+                href="https://www.instagram.com/essenzacasaejardimpoa/"
+                target="_blank"
+                rel="noreferrer"
+                className="group relative aspect-square overflow-hidden bg-background border border-border/60"
+              >
+                <div
+                  className="absolute inset-0 opacity-50 transition-transform duration-700 group-hover:scale-110"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, var(--graphite), var(--background))",
+                  }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-background/60">
+                  <Instagram size={22} className="text-primary" />
+                </div>
+                <span className="absolute bottom-2 left-2 text-[0.55rem] tracking-[0.3em] uppercase text-muted-foreground">
+                  @essenza · {String(i + 1).padStart(2, "0")}
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
