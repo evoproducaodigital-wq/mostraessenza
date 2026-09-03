@@ -60,7 +60,7 @@ export function Hero() {
               href="#contato"
               className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 text-[0.7rem] tracking-[0.35em] uppercase hover:bg-primary/85 transition-colors duration-500"
             >
-              Visitar a Mostra
+              Visite a Mostra
             </a>
           </div>
         </div>
