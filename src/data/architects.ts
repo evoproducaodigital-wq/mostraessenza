@@ -1,42 +1,42 @@
-import alexandre from "@/assets/architects/alexandre-brocker.png.asset.json";
-import andreia from "@/assets/architects/andreia-tavares.png.asset.json";
-import angelica from "@/assets/architects/angelica-fenner.png.asset.json";
-import deisi from "@/assets/architects/deisi-marins.png.asset.json";
-import doris from "@/assets/architects/doris-borges-fortes.png.asset.json";
-import eduardo from "@/assets/architects/eduardo-machado.png.asset.json";
-import gordo from "@/assets/architects/gordo-muswieck.png.asset.json";
-import fernanda from "@/assets/architects/fernanda-basso.png.asset.json";
-import guilherme from "@/assets/architects/guilherme-lopes.png.asset.json";
-import helenita from "@/assets/architects/helenita-paula-laurino.png.asset.json";
-import barbara from "@/assets/architects/barbara-haas-aline-menezes.png.asset.json";
-import heloisa from "@/assets/architects/heloisa-braga.png.asset.json";
-import ivan from "@/assets/architects/ivan-andrade.png.asset.json";
-import jane from "@/assets/architects/jane-fleck.png.asset.json";
-import liana from "@/assets/architects/liana-lamare.png.asset.json";
-import livia from "@/assets/architects/livia-bortoncello.png.asset.json";
-import luiz from "@/assets/architects/luiz-humberto.png.asset.json";
-import renato from "@/assets/architects/renato-bing.jpeg.asset.json";
-import simoneB from "@/assets/architects/simone-bertuzzo-maira-ritter.png.asset.json";
-import simoneN from "@/assets/architects/simone-neutzling.jpeg.asset.json";
-import petra from "@/assets/architects/petra-goetzke.png.asset.json";
-import ruy from "@/assets/architects/ruy-barcellos.png.asset.json";
-import lucianeD from "@/assets/architects/luciane-cardoso-daniela-martins.png.asset.json";
-import nayara from "@/assets/architects/nayara-apolinario-veronica-laurindo.png.asset.json";
-import zeca from "@/assets/architects/zeca-amaral.jpeg.asset.json";
-import carol from "@/assets/architects/carol-ochman.png.asset.json";
-import patricia from "@/assets/architects/patricia-carvalho-tatiana-franco.png.asset.json";
-import eliana from "@/assets/architects/eliana-martins.png.asset.json";
-import lucianaO from "@/assets/architects/luciana-de-oliveira.jpeg.asset.json";
-import carolinaA from "@/assets/architects/carolina-rodrigues-alejandra-affonso.jpeg.asset.json";
-import daniBrod from "@/assets/architects/daniela-brod.png.asset.json";
-import danieleM from "@/assets/architects/daniele-dame-marina-fabiao.webp.asset.json";
-import daniellaA from "@/assets/architects/daniella-azevedo.jpeg.asset.json";
-import eduardoH from "@/assets/architects/eduardo-horta.jpeg.asset.json";
-import joaoH from "@/assets/architects/joao-hammes.jpeg.asset.json";
-import simoneP from "@/assets/architects/simone-pons.jpeg.asset.json";
-import monica from "@/assets/architects/monica-furtado.png.asset.json";
-import guilhermeS from "@/assets/architects/guilherme-silveira-sarah-nogueira.png.asset.json";
-import marli from "@/assets/architects/marli-lima.png.asset.json";
+const alexandre = "/images/architects/alexandre-brocker.png";
+const andreia = "/images/architects/andreia-tavares.png";
+const angelica = "/images/architects/angelica-fenner.png";
+const deisi = "/images/architects/deisi-marins.png";
+const doris = "/images/architects/doris-borges-fortes.png";
+const eduardo = "/images/architects/eduardo-machado.png";
+const gordo = "/images/architects/gordo-muswieck.png";
+const fernanda = "/images/architects/fernanda-basso.png";
+const guilherme = "/images/architects/guilherme-lopes.png";
+const helenita = "/images/architects/helenita-paula-laurino.png";
+const barbara = "/images/architects/barbara-haas-aline-menezes.png";
+const heloisa = "/images/architects/heloisa-braga.png";
+const ivan = "/images/architects/ivan-andrade.png";
+const jane = "/images/architects/jane-fleck.png";
+const liana = "/images/architects/liana-lamare.png";
+const livia = "/images/architects/livia-bortoncello.png";
+const luiz = "/images/architects/luiz-humberto.png";
+const renato = "/images/architects/renato-bing.jpeg";
+const simoneB = "/images/architects/simone-bertuzzo-maira-ritter.png";
+const simoneN = "/images/architects/simone-neutzling.jpeg";
+const petra = "/images/architects/petra-goetzke.png";
+const ruy = "/images/architects/ruy-barcellos.png";
+const lucianeD = "/images/architects/luciane-cardoso-daniela-martins.png";
+const nayara = "/images/architects/nayara-apolinario-veronica-laurindo.png";
+const zeca = "/images/architects/zeca-amaral.jpeg";
+const carol = "/images/architects/carol-ochman.png";
+const patricia = "/images/architects/patricia-carvalho-tatiana-franco.png";
+const eliana = "/images/architects/eliana-martins.png";
+const lucianaO = "/images/architects/luciana-de-oliveira.jpeg";
+const carolinaA = "/images/architects/carolina-rodrigues-alejandra-affonso.jpeg";
+const daniBrod = "/images/architects/daniela-brod.png";
+const danieleM = "/images/architects/daniele-dame-marina-fabiao.webp";
+const daniellaA = "/images/architects/daniella-azevedo.jpeg";
+const eduardoH = "/images/architects/eduardo-horta.jpeg";
+const joaoH = "/images/architects/joao-hammes.jpeg";
+const simoneP = "/images/architects/simone-pons.jpeg";
+const monica = "/images/architects/monica-furtado.png";
+const guilhermeS = "/images/architects/guilherme-silveira-sarah-nogueira.png";
+const marli = "/images/architects/marli-lima.png";
 import { architectDetails } from "./architect-details";
 
 export type Architect = {
@@ -61,73 +61,73 @@ export type Architect = {
 };
 
 const named: Array<{ slug: string; name: string; photo: string }> = [
-  { slug: "alexandre-brocker", name: "Alexandre Brocker", photo: alexandre.url },
-  { slug: "andreia-tavares", name: "Andréia Tavares", photo: andreia.url },
-  { slug: "angelica-fenner", name: "Angélica Fenner", photo: angelica.url },
-  { slug: "deisi-marins", name: "Deisi Marins", photo: deisi.url },
-  { slug: "doris-borges-fortes", name: "Dóris Borges Fortes", photo: doris.url },
-  { slug: "eduardo-machado", name: "Eduardo Machado", photo: eduardo.url },
-  { slug: "gordo-muswieck", name: "Gordo Muswieck", photo: gordo.url },
-  { slug: "fernanda-basso", name: "Fernanda Basso", photo: fernanda.url },
-  { slug: "guilherme-lopes", name: "Guilherme Lopes", photo: guilherme.url },
+  { slug: "alexandre-brocker", name: "Alexandre Brocker", photo: alexandre },
+  { slug: "andreia-tavares", name: "Andréia Tavares", photo: andreia },
+  { slug: "angelica-fenner", name: "Angélica Fenner", photo: angelica },
+  { slug: "deisi-marins", name: "Deisi Marins", photo: deisi },
+  { slug: "doris-borges-fortes", name: "Dóris Borges Fortes", photo: doris },
+  { slug: "eduardo-machado", name: "Eduardo Machado", photo: eduardo },
+  { slug: "gordo-muswieck", name: "Gordo Muswieck", photo: gordo },
+  { slug: "fernanda-basso", name: "Fernanda Basso", photo: fernanda },
+  { slug: "guilherme-lopes", name: "Guilherme Lopes", photo: guilherme },
   {
     slug: "helenita-paula-laurino",
     name: "Helenita Falcão Laurino e Paula Laurino Dutra",
-    photo: helenita.url,
+    photo: helenita,
   },
-  { slug: "barbara-haas-aline-menezes", name: "Bárbara Haas e Aline Menezes", photo: barbara.url },
-  { slug: "heloisa-braga", name: "Heloísa Braga", photo: heloisa.url },
-  { slug: "ivan-andrade", name: "Ivan Andrade", photo: ivan.url },
-  { slug: "jane-fleck", name: "Jane Fleck", photo: jane.url },
-  { slug: "liana-lamare", name: "Liana Lamare", photo: liana.url },
-  { slug: "livia-bortoncello", name: "Lívia Bortoncello", photo: livia.url },
-  { slug: "luiz-humberto", name: "Luiz Humberto", photo: luiz.url },
-  { slug: "renato-bing", name: "Renato Bing", photo: renato.url },
-  { slug: "simone-bertuzzo-maira-ritter", name: "Simone Bertuzzo e Máira Ritter", photo: simoneB.url },
-  { slug: "simone-neutzling", name: "Simone Neutzling", photo: simoneN.url },
-  { slug: "petra-goetzke", name: "Petra Göetzke", photo: petra.url },
-  { slug: "ruy-barcellos", name: "Ruy Barcellos", photo: ruy.url },
+  { slug: "barbara-haas-aline-menezes", name: "Bárbara Haas e Aline Menezes", photo: barbara },
+  { slug: "heloisa-braga", name: "Heloísa Braga", photo: heloisa },
+  { slug: "ivan-andrade", name: "Ivan Andrade", photo: ivan },
+  { slug: "jane-fleck", name: "Jane Fleck", photo: jane },
+  { slug: "liana-lamare", name: "Liana Lamare", photo: liana },
+  { slug: "livia-bortoncello", name: "Lívia Bortoncello", photo: livia },
+  { slug: "luiz-humberto", name: "Luiz Humberto", photo: luiz },
+  { slug: "renato-bing", name: "Renato Bing", photo: renato },
+  { slug: "simone-bertuzzo-maira-ritter", name: "Simone Bertuzzo e Máira Ritter", photo: simoneB },
+  { slug: "simone-neutzling", name: "Simone Neutzling", photo: simoneN },
+  { slug: "petra-goetzke", name: "Petra Göetzke", photo: petra },
+  { slug: "ruy-barcellos", name: "Ruy Barcellos", photo: ruy },
   {
     slug: "luciane-cardoso-daniela-martins",
     name: "Luciane Cardoso e Daniela Martins",
-    photo: lucianeD.url,
+    photo: lucianeD,
   },
   {
     slug: "nayara-apolinario-veronica-laurindo",
     name: "Nayara Apolinário e Verônica Laurindo",
-    photo: nayara.url,
+    photo: nayara,
   },
-  { slug: "zeca-amaral", name: "Zéca Amaral", photo: zeca.url },
-  { slug: "carol-ochman", name: "Carol Ochman", photo: carol.url },
+  { slug: "zeca-amaral", name: "Zéca Amaral", photo: zeca },
+  { slug: "carol-ochman", name: "Carol Ochman", photo: carol },
   {
     slug: "patricia-carvalho-tatiana-franco",
     name: "Patrícia Carvalho e Tatiana Franco",
-    photo: patricia.url,
+    photo: patricia,
   },
-  { slug: "eliana-martins", name: "Eliana Martins", photo: eliana.url },
-  { slug: "luciana-de-oliveira", name: "Luciana De Oliveira", photo: lucianaO.url },
+  { slug: "eliana-martins", name: "Eliana Martins", photo: eliana },
+  { slug: "luciana-de-oliveira", name: "Luciana De Oliveira", photo: lucianaO },
   {
     slug: "carolina-rodrigues-alejandra-affonso",
     name: "Carolina Rodrigues e Alejandra Affonso",
-    photo: carolinaA.url,
+    photo: carolinaA,
   },
-  { slug: "daniela-brod", name: "Dani Brod", photo: daniBrod.url },
+  { slug: "daniela-brod", name: "Dani Brod", photo: daniBrod },
   {
     slug: "daniele-dame-marina-fabiao",
     name: "Daniele Damé e Marina Fabião",
-    photo: danieleM.url,
+    photo: danieleM,
   },
-  { slug: "daniella-azevedo", name: "Daniella Azevedo", photo: daniellaA.url },
-  { slug: "eduardo-horta", name: "Eduardo Horta", photo: eduardoH.url },
-  { slug: "joao-hammes", name: "João Hammes", photo: joaoH.url },
-  { slug: "simone-pons", name: "Simone Pons", photo: simoneP.url },
-  { slug: "monica-furtado", name: "Mônica Furtado", photo: monica.url },
+  { slug: "daniella-azevedo", name: "Daniella Azevedo", photo: daniellaA },
+  { slug: "eduardo-horta", name: "Eduardo Horta", photo: eduardoH },
+  { slug: "joao-hammes", name: "João Hammes", photo: joaoH },
+  { slug: "simone-pons", name: "Simone Pons", photo: simoneP },
+  { slug: "monica-furtado", name: "Mônica Furtado", photo: monica },
   {
     slug: "guilherme-silveira-sarah-nogueira",
     name: "Guilherme Silveira e Sarah Nogueira",
-    photo: guilhermeS.url,
+    photo: guilhermeS,
   },
-  { slug: "marli-lima", name: "Marli Lima", photo: marli.url },
+  { slug: "marli-lima", name: "Marli Lima", photo: marli },
 ];
 
 const base: Architect[] = named.map((a) => ({

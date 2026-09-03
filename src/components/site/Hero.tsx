@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import logo from "@/assets/mostra-essenza-logo.png.asset.json";
+const logo = "/images/mostra-essenza-logo.png";
 
 export function Hero() {
   return (
@@ -68,7 +68,7 @@ export function Hero() {
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <div className="relative aspect-[3/4] w-full max-w-md bg-card border border-border/60 flex items-center justify-center p-10">
             <img
-              src={logo.url}
+              src={logo}
               alt="Mostra Essenza — Jeito de Viver"
               className="w-full h-auto object-contain invert mix-blend-screen opacity-95"
             />
