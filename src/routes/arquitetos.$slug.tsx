@@ -242,3 +242,29 @@ function ArchitectPage() {
     </div>
   );
 }
+
+function Block({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <div className="text-[0.6rem] tracking-[0.35em] uppercase text-primary/80">
+        {label}
+      </div>
+      <div className="mt-3 leading-relaxed text-muted-foreground max-w-xl">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function List({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((item, i) => (
+        <li key={i} className="flex gap-3">
+          <span className="text-primary/60">—</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
