@@ -60,9 +60,18 @@ export function Footer() {
         />
       </div>
 
-      <div className="container-essenza mt-20 pt-8 border-t border-border/40 flex flex-col md:flex-row gap-4 items-center justify-between text-[0.65rem] tracking-[0.3em] uppercase text-muted-foreground/70">
+      <div className="container-essenza mt-20 pt-8 border-t border-border/40 flex flex-col md:flex-row gap-6 items-center justify-between text-[0.65rem] tracking-[0.3em] uppercase text-muted-foreground/70">
         <span>© {new Date().getFullYear()} Essenza Casa e Jardim</span>
         <span>Mostra Essenza · Edição 2026</span>
+        <a
+          href="https://www.instagram.com/evo.estrategia/"
+          target="_blank"
+          rel="noreferrer"
+          className="group flex items-center gap-3 hover:text-primary transition-colors"
+        >
+          <span className="text-[0.6rem] tracking-[0.25em] uppercase">Marketing e desenvolvimento</span>
+          <span className="font-display text-sm tracking-[0.2em] normal-case text-foreground group-hover:text-primary transition-colors">evo estratégia</span>
+        </a>
       </div>
     </footer>
   );
