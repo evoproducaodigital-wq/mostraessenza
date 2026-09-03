@@ -7,6 +7,7 @@ const links = [
   { hash: "sensorial", label: "Experiência" },
   { hash: "arquitetos-poa", label: "Arquitetos" },
   { hash: "tour", label: "Tour 360°" },
+  { hash: "patrocinadores", label: "Patrocinadores" },
   { hash: "contato", label: "Contato" },
 ];
 
