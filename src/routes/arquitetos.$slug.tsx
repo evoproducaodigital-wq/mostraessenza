@@ -89,6 +89,9 @@ function ArchitectPage() {
               <h1 className="mt-6 font-display text-4xl md:text-6xl leading-[1.05]">
                 {a.name ?? "Em breve"}
               </h1>
+              {a.office && (
+                <p className="mt-4 font-serif italic text-lg text-primary">{a.office}</p>
+              )}
               <div className="mt-8 gold-line !w-24" />
 
               <div className="mt-10 space-y-10">
@@ -105,11 +108,64 @@ function ArchitectPage() {
                   <div className="text-[0.6rem] tracking-[0.35em] uppercase text-primary/80">
                     Descrição do projeto
                   </div>
-                  <p className="mt-3 leading-relaxed text-muted-foreground max-w-xl">
-                    {a.projectDescription ??
-                      "Descrição em curadoria. Em breve, mais detalhes sobre o ambiente."}
-                  </p>
+                  <div className="mt-3 space-y-4 leading-relaxed text-muted-foreground max-w-xl">
+                    {(
+                      a.projectDescription ??
+                      "Descrição em curadoria. Em breve, mais detalhes sobre o ambiente."
+                    )
+                      .split("\n\n")
+                      .map((p, i) => (
+                        <p key={i}>{p}</p>
+                      ))}
+                  </div>
                 </div>
+
+                {a.bio && (
+                  <Block label="Mini biografia">
+                    <div className="space-y-4">
+                      {a.bio.split("\n\n").map((p, i) => (
+                        <p key={i}>{p}</p>
+                      ))}
+                    </div>
+                  </Block>
+                )}
+
+                {a.formation && a.formation.length > 0 && (
+                  <Block label="Formação">
+                    <List items={a.formation} />
+                  </Block>
+                )}
+
+                {a.specialties && a.specialties.length > 0 && (
+                  <Block label="Especialidades">
+                    <List items={a.specialties} />
+                  </Block>
+                )}
+
+                {a.projects && a.projects.length > 0 && (
+                  <Block label="Principais projetos">
+                    <List items={a.projects} />
+                  </Block>
+                )}
+
+                {a.awards && a.awards.length > 0 && (
+                  <Block label="Premiações">
+                    <List items={a.awards} />
+                  </Block>
+                )}
+
+                {a.partners && a.partners.length > 0 && (
+                  <Block label="Parceiros e agradecimentos">
+                    <List items={a.partners} />
+                  </Block>
+                )}
+
+                {a.phone && (
+                  <Block label="Contato">
+                    <p>{a.phone}</p>
+                  </Block>
+                )}
+
 
                 {a.social && (
                   <div className="flex gap-5">
