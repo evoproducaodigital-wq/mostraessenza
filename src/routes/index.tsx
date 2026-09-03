@@ -5,7 +5,7 @@ import { About } from "@/components/site/About";
 import { Sensorial } from "@/components/site/Sensorial";
 import { ArchitectsSection } from "@/components/site/ArchitectsSection";
 import { Tour360 } from "@/components/site/Tour360";
-import { InstagramFeed } from "@/components/site/InstagramFeed";
+
 import { Sponsors } from "@/components/site/Sponsors";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import { Footer } from "@/components/site/Footer";
@@ -69,7 +69,7 @@ function Index() {
         />
 
         <Tour360 />
-        <InstagramFeed />
+        
         <Sponsors />
         <FinalCTA />
       </main>
