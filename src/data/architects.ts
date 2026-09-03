@@ -34,6 +34,9 @@ import daniellaA from "@/assets/architects/daniella-azevedo.jpeg.asset.json";
 import eduardoH from "@/assets/architects/eduardo-horta.jpeg.asset.json";
 import joaoH from "@/assets/architects/joao-hammes.jpeg.asset.json";
 import simoneP from "@/assets/architects/simone-pons.jpeg.asset.json";
+import monica from "@/assets/architects/monica-furtado.png.asset.json";
+import guilhermeS from "@/assets/architects/guilherme-silveira-sarah-nogueira.png.asset.json";
+import marli from "@/assets/architects/marli-lima.png.asset.json";
 import { architectDetails } from "./architect-details";
 
 export type Architect = {
@@ -118,6 +121,13 @@ const named: Array<{ slug: string; name: string; photo: string }> = [
   { slug: "eduardo-horta", name: "Eduardo Horta", photo: eduardoH.url },
   { slug: "joao-hammes", name: "João Hammes", photo: joaoH.url },
   { slug: "simone-pons", name: "Simone Pons", photo: simoneP.url },
+  { slug: "monica-furtado", name: "Mônica Furtado", photo: monica.url },
+  {
+    slug: "guilherme-silveira-sarah-nogueira",
+    name: "Guilherme Silveira e Sarah Nogueira",
+    photo: guilhermeS.url,
+  },
+  { slug: "marli-lima", name: "Marli Lima", photo: marli.url },
 ];
 
 const base: Architect[] = named.map((a) => ({
