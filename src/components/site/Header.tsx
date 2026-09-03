@@ -29,14 +29,14 @@ export function Header() {
           : "bg-transparent py-7"
       }`}
     >
-      <div className="container-essenza grid grid-cols-[auto_1fr_auto] items-center gap-6">
+      <div className="container-essenza grid grid-cols-[auto_1fr] items-center gap-6">
         <a
           href="#top"
           className="font-display text-lg tracking-[0.2em] uppercase text-foreground"
         >
           Essenza
         </a>
-        <nav className="hidden md:flex items-center justify-center gap-10">
+        <nav className="hidden md:flex items-center justify-end gap-10">
           {links.map((l) => (
             <a
               key={l.href}
@@ -47,12 +47,6 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contato"
-          className="hidden md:inline-flex items-center border border-primary/70 px-5 py-2.5 text-[0.65rem] tracking-[0.35em] uppercase text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-        >
-          Agendar Visita
-        </a>
         <button
           onClick={() => setOpen((v) => !v)}
           className="md:hidden text-foreground"
