@@ -172,6 +172,8 @@ function ArchitectPage() {
                     {a.social.instagram && (
                       <a
                         href={a.social.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="Instagram"
                         className="text-muted-foreground hover:text-primary"
                       >

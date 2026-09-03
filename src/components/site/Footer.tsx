@@ -47,7 +47,7 @@ export function Footer() {
             { label: "Sobre", href: "#sobre" },
             { label: "Arquitetos", href: "#arquitetos-poa" },
             { label: "Tour 360°", href: "#tour" },
-            { label: "Instagram", href: "https://www.instagram.com/essenzacasaejardimpoa/" },
+            { label: "Instagram", href: "https://www.instagram.com/essenzacasaejardimpoa/", external: true },
             { label: "Contato", href: "#contato" },
           ]}
         />
@@ -68,7 +68,7 @@ export function Footer() {
         <a
           href="https://www.instagram.com/evo.estrategia/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="group flex items-center gap-3 hover:text-primary transition-colors"
         >
           <span className="text-[0.6rem] tracking-[0.25em] uppercase">Marketing e desenvolvimento</span>
@@ -90,7 +90,7 @@ function FooterCol({
   links,
 }: {
   title: string;
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; external?: boolean }[];
 }) {
   return (
     <div>
@@ -100,6 +100,8 @@ function FooterCol({
           <li key={l.label}>
             <a
               href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noopener noreferrer" : undefined}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               {l.label}
