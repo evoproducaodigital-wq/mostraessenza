@@ -341,7 +341,7 @@ export const architectDetails: ArchitectDetail[] = [
   },
   {
     slug: "nayara-apolinario-veronica-laurindo",
-    name: "Daiany Felix, Nayara Apolinário e Verônica Laurindo",
+    name: "Nayara Apolinário e Verônica Laurindo",
     office: "Singular Arquitetos",
     phone: "(69) 99312-1417",
     social: { instagram: "https://www.instagram.com/singular.arquitetos/" },
