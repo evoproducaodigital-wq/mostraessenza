@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#sensorial", label: "Experiência" },
-  { href: "#arquitetos-poa", label: "Arquitetos" },
-  { href: "#tour", label: "Tour 360°" },
-  { href: "#contato", label: "Contato" },
+  { hash: "sobre", label: "Sobre" },
+  { hash: "sensorial", label: "Experiência" },
+  { hash: "arquitetos-poa", label: "Arquitetos" },
+  { hash: "tour", label: "Tour 360°" },
+  { hash: "contato", label: "Contato" },
 ];
 
 
@@ -30,21 +31,22 @@ export function Header() {
       }`}
     >
       <div className="container-essenza grid grid-cols-[auto_1fr] items-center gap-6">
-        <a
-          href="#top"
+        <Link
+          to="/"
           className="font-display text-lg tracking-[0.2em] uppercase text-foreground"
         >
           Essenza
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center justify-end gap-10">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.hash}
+              to="/"
+              hash={l.hash}
               className="text-[0.7rem] tracking-[0.3em] uppercase text-muted-foreground hover:text-primary transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <button
@@ -59,14 +61,15 @@ export function Header() {
         <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-md">
           <div className="container-essenza flex flex-col gap-5 py-8">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+              <Link
+                key={l.hash}
+                to="/"
+                hash={l.hash}
                 onClick={() => setOpen(false)}
                 className="text-xs tracking-[0.3em] uppercase text-muted-foreground hover:text-primary"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
