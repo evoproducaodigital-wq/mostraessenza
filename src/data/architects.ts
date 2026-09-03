@@ -28,6 +28,12 @@ import patricia from "@/assets/architects/patricia-carvalho-tatiana-franco.png.a
 import eliana from "@/assets/architects/eliana-martins.png.asset.json";
 import lucianaO from "@/assets/architects/luciana-de-oliveira.jpeg.asset.json";
 import carolinaA from "@/assets/architects/carolina-rodrigues-alejandra-affonso.jpeg.asset.json";
+import daniBrod from "@/assets/architects/daniela-brod.png.asset.json";
+import danieleM from "@/assets/architects/daniele-dame-marina-fabiao.webp.asset.json";
+import daniellaA from "@/assets/architects/daniella-azevedo.jpeg.asset.json";
+import eduardoH from "@/assets/architects/eduardo-horta.jpeg.asset.json";
+import joaoH from "@/assets/architects/joao-hammes.jpeg.asset.json";
+import simoneP from "@/assets/architects/simone-pons.jpeg.asset.json";
 import { architectDetails } from "./architect-details";
 
 export type Architect = {
@@ -102,6 +108,16 @@ const named: Array<{ slug: string; name: string; photo: string }> = [
     name: "Carolina Rodrigues e Alejandra Affonso",
     photo: carolinaA.url,
   },
+  { slug: "daniela-brod", name: "Dani Brod", photo: daniBrod.url },
+  {
+    slug: "daniele-dame-marina-fabiao",
+    name: "Daniele Damé e Marina Fabião",
+    photo: danieleM.url,
+  },
+  { slug: "daniella-azevedo", name: "Daniella Azevedo", photo: daniellaA.url },
+  { slug: "eduardo-horta", name: "Eduardo Horta", photo: eduardoH.url },
+  { slug: "joao-hammes", name: "João Hammes", photo: joaoH.url },
+  { slug: "simone-pons", name: "Simone Pons", photo: simoneP.url },
 ];
 
 const base: Architect[] = named.map((a) => ({
