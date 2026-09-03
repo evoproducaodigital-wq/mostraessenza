@@ -75,7 +75,7 @@ export function Footer() {
           <img
             src={evoLogo}
             alt="evo agência de marketing"
-            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            className="h-14 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             loading="lazy"
           />
 
