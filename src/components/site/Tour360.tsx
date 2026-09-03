@@ -16,6 +16,16 @@ import t7 from "@/assets/tour/tour-7.jpg.asset.json";
 import t8 from "@/assets/tour/tour-8.jpg.asset.json";
 import t9 from "@/assets/tour/tour-9.jpg.asset.json";
 import t10 from "@/assets/tour/tour-10.jpg.asset.json";
+import t11 from "@/assets/tour/tour-11.jpg.asset.json";
+import t12 from "@/assets/tour/tour-12.jpg.asset.json";
+import t13 from "@/assets/tour/tour-13.jpg.asset.json";
+import t14 from "@/assets/tour/tour-14.jpg.asset.json";
+import t15 from "@/assets/tour/tour-15.jpg.asset.json";
+import t16 from "@/assets/tour/tour-16.jpg.asset.json";
+import t17 from "@/assets/tour/tour-17.jpg.asset.json";
+import t18 from "@/assets/tour/tour-18.jpg.asset.json";
+import t19 from "@/assets/tour/tour-19.jpg.asset.json";
+import t20 from "@/assets/tour/tour-20.jpg.asset.json";
 
 const views = [
   { url: t1.url, title: "Sala Tropical" },
@@ -28,7 +38,18 @@ const views = [
   { url: t8.url, title: "Sala de Jantar Rubi" },
   { url: t9.url, title: "Hall de Entrada" },
   { url: t10.url, title: "Jardim de Inverno" },
+  { url: t11.url, title: "Deck das Palmeiras" },
+  { url: t12.url, title: "Pátio da Casa Cinza" },
+  { url: t13.url, title: "Living Jardim de Vidro" },
+  { url: t14.url, title: "Sala Verde Clássica" },
+  { url: t15.url, title: "Suíte Cortiça" },
+  { url: t16.url, title: "Corredor Náutico" },
+  { url: t17.url, title: "Muro de Arte Urbana" },
+  { url: t18.url, title: "Sala Terracota" },
+  { url: t19.url, title: "Espaço Galeria" },
+  { url: t20.url, title: "Corredor Listrado Azul" },
 ];
+
 
 export function Tour360() {
   const ref = useReveal<HTMLDivElement>();
