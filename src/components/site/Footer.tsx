@@ -1,4 +1,6 @@
 import { Instagram, Facebook, Mail } from "lucide-react";
+import evoLogo from "@/assets/evo-logo.png.asset.json";
+
 
 export function Footer() {
   return (
@@ -70,7 +72,13 @@ export function Footer() {
           className="group flex items-center gap-3 hover:text-primary transition-colors"
         >
           <span className="text-[0.6rem] tracking-[0.25em] uppercase">Marketing e desenvolvimento</span>
-          <span className="font-display text-sm tracking-[0.2em] normal-case text-foreground group-hover:text-primary transition-colors">evo estratégia</span>
+          <img
+            src={evoLogo.url}
+            alt="evo agência de marketing"
+            className="h-7 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            loading="lazy"
+          />
+
         </a>
       </div>
     </footer>
