@@ -3,7 +3,7 @@ import { ArrowLeft, Instagram, Globe, Linkedin } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { getArchitectBySlug } from "@/data/architects";
-import logo from "@/assets/mostra-essenza-logo.png.asset.json";
+const logo = "/images/mostra-essenza-logo.png";
 
 export const Route = createFileRoute("/arquitetos/$slug")({
   loader: ({ params }) => {
@@ -77,7 +77,7 @@ function ArchitectPage() {
                 />
               ) : (
                 <img
-                  src={logo.url}
+                  src={logo}
                   alt=""
                   className="w-2/3 mx-auto mt-[20%] invert opacity-80 mix-blend-screen"
                 />

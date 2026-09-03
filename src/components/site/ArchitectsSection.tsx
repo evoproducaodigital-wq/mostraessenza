@@ -7,7 +7,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import logo from "@/assets/mostra-essenza-logo.png.asset.json";
+const logo = "/images/mostra-essenza-logo.png";
 import type { Architect } from "@/data/architects";
 import { useReveal } from "@/hooks/useReveal";
 import { Instagram, Globe, Linkedin } from "lucide-react";
@@ -82,7 +82,7 @@ export function ArchitectsSection({ id, eyebrow, city, description, architects }
                 </span>
 
                 <img
-                  src={logo.url}
+                  src={logo}
                   alt=""
                   className="w-3/4 invert opacity-90 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -124,7 +124,7 @@ function ArchitectDialog({
               <img src={a.photo} alt={a.name} className="w-full h-full object-cover grayscale" />
             ) : (
               <img
-                src={logo.url}
+                src={logo}
                 alt=""
                 className="w-2/3 invert opacity-90 mix-blend-screen"
               />

@@ -6,54 +6,54 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Panorama360 = lazy(() => import("@/components/site/Panorama360"));
 
-import t1 from "@/assets/tour/tour-1.jpg.asset.json";
-import t2 from "@/assets/tour/tour-2.jpg.asset.json";
-import t3 from "@/assets/tour/tour-3.jpg.asset.json";
-import t4 from "@/assets/tour/tour-4.jpg.asset.json";
-import t5 from "@/assets/tour/tour-5.jpg.asset.json";
-import t6 from "@/assets/tour/tour-6.jpg.asset.json";
-import t7 from "@/assets/tour/tour-7.jpg.asset.json";
-import t8 from "@/assets/tour/tour-8.jpg.asset.json";
-import t9 from "@/assets/tour/tour-9.jpg.asset.json";
-import t10 from "@/assets/tour/tour-10.jpg.asset.json";
-import t11 from "@/assets/tour/tour-11.jpg.asset.json";
-import t12 from "@/assets/tour/tour-12.jpg.asset.json";
-import t13 from "@/assets/tour/tour-13.jpg.asset.json";
-import t14 from "@/assets/tour/tour-14.jpg.asset.json";
-import t15 from "@/assets/tour/tour-15.jpg.asset.json";
-import t16 from "@/assets/tour/tour-16.jpg.asset.json";
-import t17 from "@/assets/tour/tour-17.jpg.asset.json";
-import t18 from "@/assets/tour/tour-18.jpg.asset.json";
-import t19 from "@/assets/tour/tour-19.jpg.asset.json";
-import t20 from "@/assets/tour/tour-20.jpg.asset.json";
-import t21 from "@/assets/tour/tour-21.jpg.asset.json";
-import t22 from "@/assets/tour/tour-22.jpg.asset.json";
-import t23 from "@/assets/tour/tour-23.jpg.asset.json";
+const t1 = "/images/tour/tour-1.jpg";
+const t2 = "/images/tour/tour-2.jpg";
+const t3 = "/images/tour/tour-3.jpg";
+const t4 = "/images/tour/tour-4.jpg";
+const t5 = "/images/tour/tour-5.jpg";
+const t6 = "/images/tour/tour-6.jpg";
+const t7 = "/images/tour/tour-7.jpg";
+const t8 = "/images/tour/tour-8.jpg";
+const t9 = "/images/tour/tour-9.jpg";
+const t10 = "/images/tour/tour-10.jpg";
+const t11 = "/images/tour/tour-11.jpg";
+const t12 = "/images/tour/tour-12.jpg";
+const t13 = "/images/tour/tour-13.jpg";
+const t14 = "/images/tour/tour-14.jpg";
+const t15 = "/images/tour/tour-15.jpg";
+const t16 = "/images/tour/tour-16.jpg";
+const t17 = "/images/tour/tour-17.jpg";
+const t18 = "/images/tour/tour-18.jpg";
+const t19 = "/images/tour/tour-19.jpg";
+const t20 = "/images/tour/tour-20.jpg";
+const t21 = "/images/tour/tour-21.jpg";
+const t22 = "/images/tour/tour-22.jpg";
+const t23 = "/images/tour/tour-23.jpg";
 
 const views = [
-  { url: t1.url, title: "Sala Tropical" },
-  { url: t2.url, title: "Living Clássico" },
-  { url: t3.url, title: "Estar Botânico" },
-  { url: t4.url, title: "Suíte Natureza" },
-  { url: t5.url, title: "Lounge Dourado" },
-  { url: t6.url, title: "Sala de Reuniões" },
-  { url: t7.url, title: "Salão Cor de Marfim" },
-  { url: t8.url, title: "Sala de Jantar Rubi" },
-  { url: t9.url, title: "Hall de Entrada" },
-  { url: t10.url, title: "Jardim de Inverno" },
-  { url: t11.url, title: "Deck das Palmeiras" },
-  { url: t12.url, title: "Pátio da Casa Cinza" },
-  { url: t13.url, title: "Living Jardim de Vidro" },
-  { url: t14.url, title: "Sala Verde Clássica" },
-  { url: t15.url, title: "Suíte Cortiça" },
-  { url: t16.url, title: "Corredor Náutico" },
-  { url: t17.url, title: "Muro de Arte Urbana" },
-  { url: t18.url, title: "Sala Terracota" },
-  { url: t19.url, title: "Espaço Galeria" },
-  { url: t20.url, title: "Corredor Listrado Azul" },
-  { url: t21.url, title: "Salão do Tapete Listrado" },
-  { url: t22.url, title: "Escadaria Bordô" },
-  { url: t23.url, title: "Fachada Histórica" },
+  { url: t1, title: "Sala Tropical" },
+  { url: t2, title: "Living Clássico" },
+  { url: t3, title: "Estar Botânico" },
+  { url: t4, title: "Suíte Natureza" },
+  { url: t5, title: "Lounge Dourado" },
+  { url: t6, title: "Sala de Reuniões" },
+  { url: t7, title: "Salão Cor de Marfim" },
+  { url: t8, title: "Sala de Jantar Rubi" },
+  { url: t9, title: "Hall de Entrada" },
+  { url: t10, title: "Jardim de Inverno" },
+  { url: t11, title: "Deck das Palmeiras" },
+  { url: t12, title: "Pátio da Casa Cinza" },
+  { url: t13, title: "Living Jardim de Vidro" },
+  { url: t14, title: "Sala Verde Clássica" },
+  { url: t15, title: "Suíte Cortiça" },
+  { url: t16, title: "Corredor Náutico" },
+  { url: t17, title: "Muro de Arte Urbana" },
+  { url: t18, title: "Sala Terracota" },
+  { url: t19, title: "Espaço Galeria" },
+  { url: t20, title: "Corredor Listrado Azul" },
+  { url: t21, title: "Salão do Tapete Listrado" },
+  { url: t22, title: "Escadaria Bordô" },
+  { url: t23, title: "Fachada Histórica" },
 ];
 
 
