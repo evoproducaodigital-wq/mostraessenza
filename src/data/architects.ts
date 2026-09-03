@@ -103,9 +103,7 @@ const named: Array<{ slug: string; name: string; photo: string }> = [
   },
 ];
 
-export const architectsPOA: Architect[] = [...named]
-  .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"))
-  .map((a) => ({
+const base: Architect[] = named.map((a) => ({
   id: a.slug,
   slug: a.slug,
   name: a.name,
@@ -114,9 +112,27 @@ export const architectsPOA: Architect[] = [...named]
   projectDescription:
     "A descrição do projeto assinado por este arquiteto para a Mostra Essenza 2026 será divulgada em breve.",
   gallery: [],
+  confirmed: true,
+  city: "porto-alegre",
+}));
+
+// Arquitetos que só existem no conteúdo enviado (sem foto ainda).
+const detailOnly: Architect[] = architectDetails
+  .filter((d) => !base.some((b) => b.slug === d.slug))
+  .map((d) => ({
+    id: d.slug,
+    slug: d.slug,
+    gallery: [],
     confirmed: true,
-    city: "porto-alegre",
+    city: "porto-alegre" as const,
   }));
+
+export const architectsPOA: Architect[] = [...base, ...detailOnly]
+  .map((a) => {
+    const detail = architectDetails.find((d) => d.slug === a.slug);
+    return detail ? { ...a, ...detail } : a;
+  })
+  .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? "", "pt-BR"));
 
 // Estrutura pronta para CMS — basta marcar confirmed:true e preencher os campos.
 const placeholders = (city: Architect["city"], count: number): Architect[] =>
