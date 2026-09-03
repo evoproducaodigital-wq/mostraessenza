@@ -34,11 +34,13 @@ export type Architect = {
   slug: string;
   name?: string;
   office?: string;
+  phone?: string;
   bio?: string;
   project?: string;
   projectDescription?: string;
   specialties?: string[];
   awards?: string[];
+  partners?: string[];
   photo?: string;
   social?: { instagram?: string; site?: string; linkedin?: string };
   formation?: string[];
