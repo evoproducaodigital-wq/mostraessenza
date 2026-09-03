@@ -28,6 +28,7 @@ import patricia from "@/assets/architects/patricia-carvalho-tatiana-franco.png.a
 import eliana from "@/assets/architects/eliana-martins.png.asset.json";
 import lucianaO from "@/assets/architects/luciana-de-oliveira.jpeg.asset.json";
 import carolinaA from "@/assets/architects/carolina-rodrigues-alejandra-affonso.jpeg.asset.json";
+import { architectDetails } from "./architect-details";
 
 export type Architect = {
   id: string;
