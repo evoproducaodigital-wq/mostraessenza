@@ -95,6 +95,16 @@ function ArchitectPage() {
               <div className="mt-8 gold-line !w-24" />
 
               <div className="mt-10 space-y-10">
+                {a.bio && (
+                  <Block label="Biografia">
+                    <div className="space-y-4">
+                      {a.bio.split("\n\n").map((p, i) => (
+                        <p key={i}>{p}</p>
+                      ))}
+                    </div>
+                  </Block>
+                )}
+
                 <div>
                   <div className="text-[0.6rem] tracking-[0.35em] uppercase text-primary/80">
                     Projeto
@@ -119,16 +129,6 @@ function ArchitectPage() {
                       ))}
                   </div>
                 </div>
-
-                {a.bio && (
-                  <Block label="Mini biografia">
-                    <div className="space-y-4">
-                      {a.bio.split("\n\n").map((p, i) => (
-                        <p key={i}>{p}</p>
-                      ))}
-                    </div>
-                  </Block>
-                )}
 
                 {a.formation && a.formation.length > 0 && (
                   <Block label="Formação">
