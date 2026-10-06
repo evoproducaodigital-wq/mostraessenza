@@ -10,7 +10,7 @@ export const architectDetails: ArchitectDetail[] = [
     office: "Petra Göetzke Arquitetura",
     phone: "53 98160-8810",
     social: { instagram: "https://instagram.com/petragoetzkearquitetura" },
-    bio: "Estudei arquitetura na Espanha durante 1 ano. Parte da minha linguagem arquitetônica foi construída durante o período em que vivi na Europa, experiência que ampliou meu repertório cultural e estético e que, até hoje, influencia minha forma de projetar. Trago comigo referências internacionais que se traduzem em espaços elegantes, atemporais e autênticos, concebidos para refletir a essência e o estilo de vida de cada cliente.",
+    bio: "Petra Göetzke está à frente da Petra Göetzke Arquitetura. Entre os projetos destacados em seu portfólio estão o decorado do empreendimento The Hall, Penthouse Blue, a Clínica de Dermatologia Schwantz e o Lavabo Maximalista, incluindo trabalhos publicados em anuários de arquitetura.",
     specialties: [
       "Arquitetura de interiores de alto padrão",
       "Projetos arquitetônicos de luxo",
@@ -73,6 +73,7 @@ export const architectDetails: ArchitectDetail[] = [
     office: "Liana Lamare Arquitetura",
     phone: "53 99202-8181",
     social: { instagram: "https://instagram.com/lianalamare.arquiteta" },
+    bio: "Liana de Lamare está à frente da Liana Lamare Arquitetura e atua em projetos de interiores residenciais e comerciais. Seu portfólio reúne apartamentos, áreas comuns de condomínios, ambientes corporativos e participações em mostras de arquitetura, incluindo projetos apresentados na Casa Cor RS.",
     specialties: ["Interiores residenciais e comerciais de alto padrão"],
     projects: [
       "Apartamento decorado Torre de São Gonçalo",
@@ -106,6 +107,7 @@ export const architectDetails: ArchitectDetail[] = [
     office: "Luciana De Oliveira — Arquitetura e Interiores",
     phone: "53 98111-4345",
     social: { instagram: "https://instagram.com/arqlucianadeoliveira" },
+    bio: "Luciana De Oliveira atua com arquitetura e interiores e possui especialização em Arquitetura de Interiores, além de pós-graduação e MBA em Arquitetura de Interiores e Iluminação pelo IPOG-RS. Sua trajetória reúne projetos residenciais, apartamentos decorados, participações em mostras, publicações em anuários de arquitetura e reconhecimento em concursos nacionais. Também integrou a diretoria cultural da Associação de Engenheiros e Arquitetos de Pelotas entre 2007 e 2010.",
     formation: [
       "Especialista em Arquitetura de Interiores",
       "Pós-graduação e MBA em Arquitetura de Interiores e Iluminação — IPOG-RS",
@@ -488,5 +490,93 @@ export const architectDetails: ArchitectDetail[] = [
     projectDescription:
       "Arte feita na parede externa da loja compondo com peças pintadas em placas cimentícias, material apropriado para permanecer exposto em ambiente externo. A composição completa seria mais uma instalação do que uma pintura.\n\nO jeito que as placas são expostas dá a ideia de rebocos antigos para dialogar com a casa, revivendo memórias e histórias que ali foram vivenciadas. Foi um jeito de eternizar o passado e a história daquela linda residência que hoje se tornou a loja Essenza.\n\nA presença do “Stevie” (o personagem) é para me representar. Ele representa o artista que passou por ali deixando aquela mensagem.",
     partners: ["Casa Brasil Tintas", "Elétrica Fonseca", "Persol"],
+  },
+  {
+    slug: "alexandre-brocker",
+    bio: "Alexandre Brocker atua nas áreas de arquitetura, design e interiores. Na Mostra Essenza 2026, assina o ambiente “O Homem e seu Melhor Amigo”.",
+  },
+  {
+    slug: "andreia-tavares",
+    bio: "Andréia Tavares está à frente da Andréia Tavares Arquitetura & Interiores. Na Mostra Essenza 2026, assina “Aconchego”, ambiente que propõe desacelerar por meio de uma arquitetura acolhedora e funcional.",
+  },
+  {
+    slug: "angelica-fenner",
+    bio: "Arquiteta e urbanista formada pela UFRGS, Angélica Fenner reúne 35 anos de experiência profissional e está à frente do Angélica Fenner Studio. Sua trajetória inclui projetos residenciais, comerciais e colaborações com profissionais da área de decoração.",
+  },
+  {
+    slug: "carol-ochman",
+    bio: "Carol Ochman é arquiteta e está à frente da Carol Ochman Arquitetura e Interiores. Na Mostra Essenza 2026, apresenta o Home Office “Uma Bagunça Organizada”, explorando soluções criativas e funcionais para integrar trabalho e conforto ao cotidiano.",
+  },
+  {
+    slug: "deisi-marins",
+    bio: "Deisi Marins atua com interiores e reúne experiências em projetos residenciais, consultórios, hotelaria, apartamentos decorados, áreas condominiais e casas decoradas no litoral norte do Rio Grande do Sul. Na Mostra Essenza 2026, apresenta seus ambientes com uma abordagem voltada à personalidade, funcionalidade e composição dos espaços.",
+  },
+  {
+    slug: "doris-borges-fortes",
+    bio: "Dóris Borges Fortes é designer e atua à frente da Dóris Decoração de Interiores. Na Mostra Essenza 2026, assina o “Dormitório do Casal — Sensação de Bem-Estar”, ambiente concebido a partir do equilíbrio entre sofisticação, conforto e elegância.",
+  },
+  {
+    slug: "eduardo-machado",
+    bio: "Eduardo Machado está à frente da Eduardo Machado Arquitetura. Em sua abordagem profissional, entende cada projeto como um novo desafio, desenvolvido a partir de clientes, ideias e formas de viver diferentes.",
+  },
+  {
+    slug: "fernanda-basso",
+    bio: "Fernanda Basso está à frente do Studio Fernanda Basso. Na Mostra Essenza 2026, assina o “Living Oliva”, espaço inspirado na força, longevidade e atemporalidade da natureza.",
+  },
+  {
+    slug: "guilherme-lopes",
+    bio: "Guilherme Lopes está à frente do Studio Guilherme Lopes. Seus projetos residenciais e corporativos são desenvolvidos a partir de quatro pilares definidos pelo studio: protagonista, atemporal, moderno e funcional.",
+  },
+  {
+    slug: "guilherme-silveira-sarah-nogueira",
+    bio: "Guilherme Silveira e Sarah Nogueira estão à frente do Studio 1/20 Arquitetura. Entre os projetos apresentados pela dupla estão o Apto Jaraguá e a Cabana SE, trabalhos que exploram diferentes relações entre referências contemporâneas e clássicas, conforto, elegância e identidade.",
+  },
+  {
+    slug: "helenita-paula-laurino",
+    bio: "Helenita Falcão Laurino e Paula Laurino Dutra integram a HF Laurino Arquitetura & Interiores. Na Mostra Essenza 2026, a dupla participa com os ambientes “Sala das Grifes” e “Moodboard Coffee”, desenvolvidos a partir de uma linguagem de sofisticação, personalidade e atenção aos detalhes.",
+  },
+  {
+    slug: "heloisa-braga",
+    bio: "Heloísa Braga atua desde 1984 em arquitetura residencial e comercial, decoração de interiores, reformas e revitalização de fachadas. À frente da HB Interiores, soma mais de quatro décadas de experiência na criação de projetos atemporais e personalizados, buscando unir sofisticação, funcionalidade, conforto e identidade. Entre seus desafios profissionais recentes está a criação do complexo arquitetônico do Haras Legacy, em Bagé, no Rio Grande do Sul.",
+  },
+  {
+    slug: "ivan-andrade",
+    bio: "Ivan Andrade é designer, técnico em Edificações pela Escola Técnica Parobé e está à frente da Ivan Andrade Design. Entre os trabalhos e marcos profissionais informados em sua trajetória estão o Restaurante Birra e Pasta, a Livraria do Globo, a implantação da primeira exposição de decoração em Porto Alegre, a implantação da Casa Cor Rio Grande do Sul e o Salão Gaúcho de Decoração. Em 2023, teve seu trabalho destacado na capa do Anuário Casa Cor RS.",
+  },
+  {
+    slug: "jane-fleck",
+    bio: "Jane Freitas Fleck é arquiteta paisagista. Na Mostra Essenza 2026, assina “Encontros”, espaço externo e multifuncional em que paisagismo e design se unem para promover acolhimento, conexão com a natureza, contemplação e pertencimento.",
+  },
+  {
+    slug: "livia-bortoncello",
+    bio: "Lívia Bortoncello está à frente da Livia Bortoncello Arquitetura. Na Mostra Essenza 2026, assina a “Sala da Lareira”, desenvolvida a partir de uma composição que busca luminosidade, leveza, equilíbrio, acolhimento e atemporalidade.",
+  },
+  {
+    slug: "luiz-humberto",
+    bio: "Luiz Humberto de Albuquerque está à frente da Luiz Humberto de Albuquerque Arquitetura. Na Mostra Essenza 2026, assina o “Gabinete do Grand Tour”, espaço inspirado nos antigos viajantes que percorriam lugares históricos e reuniam imagens, gravuras e referências de suas jornadas.",
+  },
+  {
+    slug: "marli-lima",
+    bio: "Marli Lima está à frente da Marli Lima Interiores. Na Mostra Essenza 2026, assina o “Refúgio Sensorial”, ambiente concebido para unir texturas, luz, formas, conforto e bem-estar em uma atmosfera acolhedora e sofisticada.",
+  },
+  {
+    slug: "monica-furtado",
+    bio: "Mônica Furtado atua com arquitetura, interiores e paisagismo à frente da Mônica Furtado Arquitetura e Paisagismo. Entre os trabalhos destacados em sua trajetória estão o paisagismo corporativo interno e externo da sede do Grupo Lins Ferrão e projetos de arquitetura de interiores e paisagismo em residências do Terraville Golf Club.",
+  },
+  {
+    slug: "renato-bing",
+    bio: "Renato Bing é designer e participa da Mostra Essenza 2026 com a “Varanda Zig Zag”. Seu trabalho integra a seleção de profissionais convidados desta edição da mostra.",
+  },
+  {
+    slug: "ruy-barcellos",
+    bio: "Ruy de Oliveira Barcellos Neto está à frente da Ruy Barcellos. Na Mostra Essenza 2026, assina “Escultura do Convívio”, ambiente que explora a relação entre arte, decoração, encontros e formas de habitar.",
+  },
+  {
+    slug: "simone-bertuzzo-maira-ritter",
+    bio: "Simone Bertuzzo e Máira Ritter atuam por meio do Studio Sima Arquitetura e da Maira Ritter Arquitetura. Na Mostra Essenza 2026, assinam a “Casa Mansarda”, concebida como um espaço acolhedor, habitável e confortável, com referências de garimpo europeu.",
+  },
+  {
+    slug: "zeca-amaral",
+    bio: "Com uma trajetória profissional de décadas, Zéca Amaral está à frente da Zeca Amaral Arquitetura. O escritório entende cada projeto como único e dedica a cada trabalho o mesmo esforço, energia e atenção, respeitando as particularidades de cada proposta.",
   },
 ];
